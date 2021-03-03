@@ -1,0 +1,329 @@
+:root {
+--primary-color: #007ce3;
+--secondary-color: #ff30a1;
+--tertiary-color: #00569e;
+--dark-grey: #2b2b2b;
+--medium-grey: darkgray;
+--light-grey: lightgray;
+--button-font-color: #fff;
+--button-border-bottom: rgba(0, 0, 0, 0.3);
+--light-sun: #fcffad;
+--medium-sun: #edc655;
+--dark-sun: #f76414;
+--heading-font-weight: 700;
+--remove-underline: none;
+}
+
+body {
+  color: var(--dark-grey);
+  background-color: var(--light-grey);
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  position: relative;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: var(--heading-font-weight);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: var(--heading-font-weight);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--heading-font-weight);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:visited {
+  color: var(--secondary-color);
+}
+
+a:hover, a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: var(--remove-underline);
+}
+
+a:active {
+  /* selected link */
+  color: var(--tertiary-color);
+  text-decoration: var(--remove-underline);
+}
+
+#cv,
+.button,
+input[type="submit"] {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  /* for some reason the text colour was not being applied to my CV button and it
+  was instead taking the colour of a visited link per the pseudo-class rules above.
+  This is confusing because I thought the rules should have equal specificity so
+  because this rule is further down the file it should take precedence. To prevent
+  this happening I have had to give the button an ID (which I have called cv);
+  this corrects the problem but I'd like to understand why this happened?*/
+  color: var(--button-font-color);
+  text-decoration: var(--remove-underline);
+  /* adds spacing to the button */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid (as
+  opposed to broken etc), and a color in RGBA format */
+  border-bottom: 2px solid var(--button-border-bottom);
+  transition: opacity 0.2s;
+}
+
+.button:hover,
+.button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.profile {
+  max-width: 750px;
+  margin: 50px auto 0px auto;
+  padding-bottom: 125px;
+}
+
+.profile__portrait {
+  float: left;
+  width: 25vw;
+  margin-right: 4vw;
+  border-radius: 50%;
+}
+
+.about{
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 125px;
+}
+
+/* we were previously instructed to put this in but on exercise 7 it is now no
+longer there. I want to keep the code for now so am just going to prevent it
+from displaying for now */
+.skills-table{
+  display: none;
+}
+
+.contact{
+  max-width: 750px;
+  margin: 0 50px;
+  padding-bottom: 125px;
+}
+
+.work{
+  max-width: 750px;
+  margin: 0 auto;
+  padding-bottom: 125px;
+}
+
+
+/*Initially my footer sat underneath the image, but when the image was resized and became
+bigger the footer jumped up next to the other text. I'm a bit confused about why
+this happens because I thought elements floated within their own containers, but
+my footer is in a different container so why is it even affected? Footer is a
+block element so should always create a new line?!*/
+
+/* clear: both removes all floats on either side of an element */
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+/* Reduced padding inline start to give sufficient room for nav list text on smaller screens
+but some padding needed to make nav list stay in position over 300px*/
+  padding-inline-start: 20px;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list__item--active {
+  text-decoration: var(--remove-underline);
+}
+
+.navigation-list__item {
+  border: none;
+  transition: color 0.2s;
+}
+
+.navigation-list__item:hover,
+.navigation-list__item:focus {
+  color: var(--primary-color);
+}
+
+/* I have changed the order of the colours so they run from lightest to darkest
+as the code per the instructions had the middle colour first and this created a
+strange pulsing effect that I don't think was intended */
+@keyframes color-change {
+  0% {
+    fill: var(--light-sun);
+  }
+  50% {
+    fill: var(--medium-sun);
+  }
+  100% {
+    fill: var(--dark-sun);
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px,50px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* start grid fallback */
+.projects__example {
+  display: inline-block;
+  width: 33%
+}
+/* end grid fallback */
+
+@supports (display: grid) {
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+  }
+
+  /* because my background is lightgray, I am using darkgray as my background Color
+  for my grid items */
+  .projects__example {
+    background-color: var(--medium-grey);
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .projects__example:last-child {
+    grid-area: 1/3/3/3;
+  }
+}
+
+@media all and (max-width: 300px) {
+  .profile__portrait {
+    width: 50vw;
+  }
+  .profile__link {
+    position: relative;
+    left: 20px; /*to align with padding of the header */
+  }
+  .navigation-list {
+    padding-inline-start: 0px; /* reducing this padding to zero only for smallest
+    screen size */
+  }
+}
+
+@media all and (max-width: 320px) {
+  .logo {
+    width: 140px;
+    height: 50px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 501px) and (max-width:750px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .projects {
+    grid-gap: 10px;
+  }
+  .projects__example:last-child {
+    grid-column: auto/auto;
+    grid-row: auto/auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/*this code will make the link text align with the profile text as it is the same
+distance from the screen edge as the (image+image margin). Note that it needs to
+be different for the narrowest screen though because I have changed the size of
+the image and this is dealt with above*/
+
+@media all and (min-width: 301px) and (max-width:500px) {
+  .profile__link {
+    position: relative;
+    left: 29vw;
+  }
+}

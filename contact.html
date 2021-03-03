@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Penny Graham</title>
+  <link rel="shortcut icon" href="./img/penny_graham_favicon.jpg" sizes="16x12"
+        alt="Icon for Penny Graham portfolio website, a portrait image of Penny Graham">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.production.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <!-- Add my logo here -->
+    <img class="page-header__item logo" src="http://via.placeholder.com/200x70" alt="">
+    <nav class="main navigation page-header__item">
+      <ul role="menubar" class="navigation-list">
+        <li role="presentation">
+          <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact">
+    <!-- Put in real contact details and link text for final version-->
+    <h1>Contact</h1>
+    <div>
+      <a
+        href="mailto:pennygraham100@gmail.com?bcc=pennygraham100@gmail.com&subject=Project%20Enquiry%20&body=Hi%20Penny,%0D%0A%0D%0AHere's%20an%20outline%20of%20my%20project:%0D%0A%0D%0APlease%20contact%20me%20on:">Contact me
+      </a><br>
+      <!-- Remove unnecessary breaks later when you've applied styling with CSS -->
+      <br>
+      <!-- In order to pass accessibility checks I had to alter the telephone text
+      description to "Call me:+44 1234 123 123". This looks clumsy so I have
+      reverted to simply the number. I don't want to make the number not visible as this
+      creates another accessibility issue; I'm therefore accepting the error -->
+      Tel: <a href="Tel:+44 1234 123 123">+44 1234 123 123</a><br>
+      Skype: <a href="skype:live:.cid.6be88217e41b1253?call">Skype me</a><br>
+      Email: <a href="mailto:pennygraham100@gmail.com">pennygraham100@gmail.com</a>
+    </div>
+
+    <form action="" method="post" id="contact-form">
+      <label class="standard-label" for="contact-email">Email: </label>
+      <input type="email" id="contact-email" required><br>
+
+      <label class="standard-label" for="contact-telephone">Telephone: </label>
+      <input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-telephone"><br>
+
+      <label class="standard-label" for="contact-message">Message: </label>
+      <textarea maxlength="240" id="contact-message" required></textarea><br><br>
+      <input type="submit" value="Send message">
+    </form>
+  </main>
+
+  <footer class="page-footer">
+    <h2>Find me on</h2>
+    <!-- Add the social media links AND images here. When linking to external
+    resources remember to open the link in a separate tab using the property
+    target="_blank" so users stay on your website-->
+    <div class="social-media">
+      <a href="#"><img src="img/github_icon.svg" alt="Image of the Github icon"></a>
+      <a href="#"><img src="img/twitter_icon.svg" alt="Image of the Twitter icon"></a>
+      <a href="#"><img src="img/linkedin_icon.svg" alt="Image of the LinkedIn icon"></a>
+  </div>
+  </footer>
+
+  <script src="js/tota11y.min.js"></script>
+</body>
+</html>

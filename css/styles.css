@@ -108,7 +108,6 @@ input[type="submit"]:focus {
 .about{
   max-width: 750px;
   margin: 0 auto;
-  text-align: center;
   padding-bottom: 125px;
 }
 

@@ -48,7 +48,8 @@ a:visited {
   color: var(--secondary-color);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /* No underlining when hovering over a link */
   text-decoration: var(--remove-underline);
 }

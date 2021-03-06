@@ -319,7 +319,7 @@ strange pulsing effect that I don't think was intended */
 /*this code will make the link text align with the profile text as it is the same
 distance from the screen edge as the (image+image margin). Note that it needs to
 be different for the narrowest screen though because I have changed the size of
-the image and this is dealt with above*/
+the image; this is dealt with above*/
 
 @media all and (min-width: 301px) and (max-width:500px) {
   .profile__link {

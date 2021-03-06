@@ -67,7 +67,7 @@ input[type="submit"] {
   border: none;
   font-family: inherit;
   background-color: var(--primary-color);
-  /* for some reason the text colour was not being applied to my CV button and it
+  /* for some reason the font colour was not being applied to my CV button and it
   was instead taking the colour of a visited link per the pseudo-class rules above.
   This is confusing because I thought the rules should have equal specificity so
   because this rule is further down the file it should take precedence. To prevent

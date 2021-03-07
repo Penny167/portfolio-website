@@ -126,6 +126,13 @@ from displaying for now */
   padding-bottom: 125px;
 }
 
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  width: 30vw;
+}
+
 .work{
   max-width: 750px;
   margin: 0 auto;

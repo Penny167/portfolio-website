@@ -282,6 +282,9 @@ strange pulsing effect that I don't think was intended */
   .body {
     font-size: 12px;
   }
+  .page-header {
+    padding: 10px;
+  }
 }
 
 @media all and (max-width: 500px) {

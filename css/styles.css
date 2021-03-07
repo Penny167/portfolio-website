@@ -285,6 +285,9 @@ strange pulsing effect that I don't think was intended */
   h1 {
     font-size: 18px;
   }
+  h2 {
+    font-size: 16px;
+  }
   .page-header {
     padding: 10px;
   }
@@ -299,6 +302,9 @@ strange pulsing effect that I don't think was intended */
 @media all and (min-width: 301px) and (max-width: 750px) {
   h1 {
     font-size: 22px;
+  }
+  h2 {
+    font-size: 18px;
   }
 }
 

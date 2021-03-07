@@ -273,11 +273,14 @@ strange pulsing effect that I don't think was intended */
 
 @media all and (max-width: 300px) {
   .profile__portrait {
-    width: 50vw;
+    width: 30vw;
   }
   .profile__link {
     position: relative;
     left: 20px; /*to align with padding of the header */
+  }
+  .body {
+    font-size: 12px;
   }
 }
 

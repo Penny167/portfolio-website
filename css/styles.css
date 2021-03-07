@@ -287,6 +287,7 @@ strange pulsing effect that I don't think was intended */
   }
   h2 {
     font-size: 16px;
+    margin: 0;
   }
   .page-header {
     padding: 10px;
@@ -305,6 +306,7 @@ strange pulsing effect that I don't think was intended */
   }
   h2 {
     font-size: 18px;
+    margin: 0;
   }
 }
 

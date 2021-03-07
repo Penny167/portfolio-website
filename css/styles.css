@@ -323,6 +323,9 @@ strange pulsing effect that I don't think was intended */
     width: 140px;
     height: 50px;
   }
+  .work {
+    margin: 0 2vw;
+  }
 }
 
 /*this code will make the link text align with the profile text as it is the same

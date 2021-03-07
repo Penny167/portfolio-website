@@ -101,7 +101,8 @@ input[type="submit"]:focus {
 .profile__portrait {
   float: left;
   width: 25vw;
-  margin-right: 4vw;
+  margin-right: 2vw;
+  margin-left: 2vw;
   border-radius: 50%;
 }
 

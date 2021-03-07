@@ -282,6 +282,9 @@ strange pulsing effect that I don't think was intended */
   body {
     font-size: 12px;
   }
+  h1 {
+    font-size: 18px;
+  }
   .page-header {
     padding: 10px;
   }
@@ -290,6 +293,12 @@ strange pulsing effect that I don't think was intended */
 @media all and (max-width: 500px) {
   .projects {
     grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 301px) and (max-width: 750px) {
+  h1 {
+    font-size: 22px;
   }
 }
 
@@ -309,9 +318,6 @@ strange pulsing effect that I don't think was intended */
   }
   .navigation-list li {
     display: block;
-  }
-  h1 {
-    font-size: 22px;
   }
   .logo {
     width: 140px;

@@ -82,6 +82,8 @@ input[type="submit"] {
   opposed to broken etc), and a color in RGBA format */
   border-bottom: 2px solid var(--button-border-bottom);
   transition: opacity 0.2s;
+  margin: 10px 0;
+  align-self: baseline;
 }
 
 .button:hover,

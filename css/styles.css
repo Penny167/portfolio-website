@@ -277,7 +277,7 @@ strange pulsing effect that I don't think was intended */
   }
   .profile__link {
     position: relative;
-    left: 10px; /*to align with padding of the header */
+    left: 34vw; /*to sit neatly underneath the main text */
   }
   body {
     font-size: 12px;

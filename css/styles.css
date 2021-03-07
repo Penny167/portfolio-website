@@ -175,7 +175,6 @@ block element so should always create a new line?!*/
   list-style-type: none;
 /* Reduced padding inline start to give sufficient room for nav list text on smaller screens
 but some padding needed to make nav list stay in position over 300px*/
-  padding-inline-start: 20px;
 }
 
 .navigation-list li {
@@ -279,10 +278,6 @@ strange pulsing effect that I don't think was intended */
   .profile__link {
     position: relative;
     left: 20px; /*to align with padding of the header */
-  }
-  .navigation-list {
-    padding-inline-start: 0px; /* reducing this padding to zero only for smallest
-    screen size */
   }
 }
 

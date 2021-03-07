@@ -279,7 +279,7 @@ strange pulsing effect that I don't think was intended */
     position: relative;
     left: 20px; /*to align with padding of the header */
   }
-  .body {
+  body {
     font-size: 12px;
   }
   .page-header {

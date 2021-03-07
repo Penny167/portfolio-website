@@ -340,6 +340,7 @@ strange pulsing effect that I don't think was intended */
   }
   .about {
     margin: 2vw;
+    padding-bottom: 100px;
   }
 }
 

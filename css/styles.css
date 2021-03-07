@@ -313,6 +313,9 @@ strange pulsing effect that I don't think was intended */
     grid-column: auto/auto;
     grid-row: auto/auto;
   }
+  .navigation-list li {
+    display: block;
+  }
   h1 {
     font-size: 22px;
   }

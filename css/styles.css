@@ -67,17 +67,20 @@ input[type="submit"] {
   border: none;
   font-family: inherit;
   background-color: var(--primary-color);
+
   /* for some reason the font colour was not being applied to my CV button and it
   was instead taking the colour of a visited link per the pseudo-class rules above.
   This is confusing because I thought the rules should have equal specificity so
   because this rule is further down the file it should take precedence. To prevent
   this happening I have had to give the button an ID (which I have called cv);
-  this corrects the problem but I'd like to understand why this happened?*/
+  this corrects the problem but I'd like to understand why this happened? */
   color: var(--button-font-color);
   text-decoration: var(--remove-underline);
+
   /* adds spacing to the button */
   padding: 10px;
   border-radius: 3px;
+
   /* gives the button a bottom border with a width of 2px, a type of solid (as
   opposed to broken etc), and a color in RGBA format */
   border-bottom: 2px solid var(--button-border-bottom);
@@ -96,7 +99,7 @@ input[type="submit"]:focus {
 
 .profile {
   max-width: 750px;
-  margin: 50px auto 0px auto;
+  margin: 50px auto 0;
   padding-bottom: 125px;
 }
 
@@ -108,7 +111,7 @@ input[type="submit"]:focus {
   border-radius: 50%;
 }
 
-.about{
+.about {
   max-width: 750px;
   margin: 0 auto;
   text-align: center;
@@ -118,11 +121,11 @@ input[type="submit"]:focus {
 /* we were previously instructed to put this in but on exercise 7 it is now no
 longer there. I want to keep the code for now so am just going to prevent it
 from displaying for now */
-.skills-table{
+.skills-table {
   display: none;
 }
 
-.contact{
+.contact {
   max-width: 750px;
   margin: 0 50px;
   padding-bottom: 125px;
@@ -135,18 +138,17 @@ from displaying for now */
   width: 30vw;
 }
 
-.work{
+.work {
   max-width: 750px;
   margin: 0 auto;
   padding-bottom: 125px;
 }
 
-
-/*Initially my footer sat underneath the image, but when the image was resized and became
+/* Initially my footer sat underneath the image, but when the image was resized and became
 bigger the footer jumped up next to the other text. I'm a bit confused about why
 this happens because I thought elements floated within their own containers, but
 my footer is in a different container so why is it even affected? Footer is a
-block element so should always create a new line?!*/
+block element so should always create a new line?! */
 
 /* clear: both removes all floats on either side of an element */
 
@@ -182,8 +184,9 @@ block element so should always create a new line?!*/
 
 .navigation-list {
   list-style-type: none;
-/* Reduced padding inline start to give sufficient room for nav list text on smaller screens
-but some padding needed to make nav list stay in position over 300px*/
+
+  /* Reduced padding inline start to give sufficient room for nav list text on smaller screens
+but some padding needed to make nav list stay in position over 300px */
 }
 
 .navigation-list li {

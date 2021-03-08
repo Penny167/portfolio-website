@@ -67,17 +67,20 @@ input[type="submit"] {
   border: none;
   font-family: inherit;
   background-color: var(--primary-color);
+
   /* for some reason the font colour was not being applied to my CV button and it
   was instead taking the colour of a visited link per the pseudo-class rules above.
   This is confusing because I thought the rules should have equal specificity so
   because this rule is further down the file it should take precedence. To prevent
   this happening I have had to give the button an ID (which I have called cv);
-  this corrects the problem but I'd like to understand why this happened?*/
+  this corrects the problem but I'd like to understand why this happened? */
   color: var(--button-font-color);
   text-decoration: var(--remove-underline);
+
   /* adds spacing to the button */
   padding: 10px;
   border-radius: 3px;
+
   /* gives the button a bottom border with a width of 2px, a type of solid (as
   opposed to broken etc), and a color in RGBA format */
   border-bottom: 2px solid var(--button-border-bottom);
@@ -96,7 +99,7 @@ input[type="submit"]:focus {
 
 .profile {
   max-width: 750px;
-  margin: 50px auto 0px auto;
+  margin: 50px auto 0;
   padding-bottom: 125px;
 }
 
@@ -108,7 +111,7 @@ input[type="submit"]:focus {
   border-radius: 50%;
 }
 
-.about{
+.about {
   max-width: 750px;
   margin: 0 auto;
   text-align: center;
@@ -118,11 +121,11 @@ input[type="submit"]:focus {
 /* we were previously instructed to put this in but on exercise 7 it is now no
 longer there. I want to keep the code for now so am just going to prevent it
 from displaying for now */
-.skills-table{
+.skills-table {
   display: none;
 }
 
-.contact{
+.contact {
   max-width: 750px;
   margin: 0 50px;
   padding-bottom: 125px;
@@ -135,18 +138,17 @@ from displaying for now */
   width: 30vw;
 }
 
-.work{
+.work {
   max-width: 750px;
   margin: 0 auto;
   padding-bottom: 125px;
 }
 
-
-/*Initially my footer sat underneath the image, but when the image was resized and became
+/* Initially my footer sat underneath the image, but when the image was resized and became
 bigger the footer jumped up next to the other text. I'm a bit confused about why
 this happens because I thought elements floated within their own containers, but
 my footer is in a different container so why is it even affected? Footer is a
-block element so should always create a new line?!*/
+block element so should always create a new line?! */
 
 /* clear: both removes all floats on either side of an element */
 
@@ -182,8 +184,9 @@ block element so should always create a new line?!*/
 
 .navigation-list {
   list-style-type: none;
-/* Reduced padding inline start to give sufficient room for nav list text on smaller screens
-but some padding needed to make nav list stay in position over 300px*/
+
+  /* Reduced padding inline start to give sufficient room for nav list text on smaller screens
+but some padding needed to make nav list stay in position over 300px */
 }
 
 .navigation-list li {
@@ -212,9 +215,11 @@ strange pulsing effect that I don't think was intended */
   0% {
     fill: var(--light-sun);
   }
+
   50% {
     fill: var(--medium-sun);
   }
+
   100% {
     fill: var(--dark-sun);
   }
@@ -228,8 +233,9 @@ strange pulsing effect that I don't think was intended */
   from {
     transform: translate(0, 50px);
   }
+
   to {
-    transform: translate(200px,50px);
+    transform: translate(200px, 50px);
   }
 }
 
@@ -241,6 +247,7 @@ strange pulsing effect that I don't think was intended */
   from {
     transform: translate(446px, 48px);
   }
+
   to {
     transform: translate(100px, 48px);
   }
@@ -253,8 +260,9 @@ strange pulsing effect that I don't think was intended */
 /* start grid fallback */
 .projects__example {
   display: inline-block;
-  width: 33%
+  width: 33%;
 }
+
 /* end grid fallback */
 
 @supports (display: grid) {
@@ -284,31 +292,36 @@ strange pulsing effect that I don't think was intended */
   .profile__portrait {
     width: 30vw;
   }
+
   .profile__link {
     position: relative;
-    left: 34vw; /*to sit neatly underneath the main text */
+    left: 34vw; /* to sit neatly underneath the main text */
   }
+
   body {
     font-size: 12px;
   }
+
   h1 {
     font-size: 18px;
   }
+
   h2 {
     font-size: 16px;
     margin: 0;
   }
+
   .page-header {
     padding: 10px;
   }
 }
 
-/*this code will make the link text align with the profile text as it is the same
+/* this code will make the link text align with the profile text as it is the same
 distance from the screen edge as the (image+image margin). Note that it needs to
 be different for the narrowest screen though because I have changed the size of
-the image there too; this is dealt with in the code above*/
+the image there too; this is dealt with in the code above */
 
-@media all and (min-width: 301px) and (max-width:500px) {
+@media all and (min-width: 301px) and (max-width: 500px) {
   .profile__link {
     position: relative;
     left: 29vw;
@@ -325,13 +338,14 @@ the image there too; this is dealt with in the code above*/
   h1 {
     font-size: 22px;
   }
+
   h2 {
     font-size: 18px;
     margin: 0;
   }
 }
 
-@media all and (min-width: 501px) and (max-width:750px) {
+@media all and (min-width: 501px) and (max-width: 750px) {
   .projects {
     grid-template-columns: 1fr 1fr;
   }
@@ -341,24 +355,30 @@ the image there too; this is dealt with in the code above*/
   .projects {
     grid-gap: 10px;
   }
+
   .projects__example:last-child {
     grid-column: auto/auto;
     grid-row: auto/auto;
   }
+
   .navigation-list li {
     display: block;
   }
+
   .logo {
     width: 140px;
     height: 50px;
   }
+
   .work {
     margin: 0 2vw;
   }
+
   svg {
     max-width: 100vw;
     height: 40vh;
   }
+
   .about {
     margin: 2vw;
     padding-bottom: 100px;

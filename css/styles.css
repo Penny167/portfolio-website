@@ -283,9 +283,13 @@ strange pulsing effect that I don't think was intended */
     padding: 10px;
   }
 
-  .projects__example:last-child {
-    grid-area: 1/3/3/3;
+  .project-description {
+    font-size: 15px;
   }
+
+  /*.projects__example:last-child {
+    grid-area: 1/3/3/3;
+  }*/
 }
 
 @media all and (max-width: 300px) {

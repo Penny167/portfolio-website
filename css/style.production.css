@@ -408,6 +408,14 @@ strange pulsing effect that I don't think was intended */
     font-size: 15px;
   }
 
+  .project-link {
+    text-decoration: none;
+  }
+
+  .project-link:visited {
+    text-decoration: none;
+  }
+
   /*.projects__example:last-child {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
